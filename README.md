@@ -2,6 +2,8 @@
 
 **Staff Software Engineer** | Streaming Infrastructure · Media Systems · AI Tooling
 
+A portfolio of AI-powered tools and agents spanning agentic pipelines, full-stack apps, and rapid prototypes. Developed using Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw, Lovable, and Base44, with advanced prompt engineering across Claude, ChatGPT, and Gemini. Clean, production-grade code at the intersection of deep systems engineering and modern AI fluency.
+
 19+ years building robust, scalable systems — from multi-DRM streaming platforms and audio/video pipelines at Xperi/TiVo to AI-powered career tools during my current career break. I hold a patent from Yahoo and a WSDM publication, and I hold a BTech/MTech from IIT Madras (Civil Engineering).
 
 Right now I'm focused on shipping AI tools that solve real problems — many of them ones I've faced firsthand.
