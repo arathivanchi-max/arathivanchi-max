@@ -1,7 +1,5 @@
 # Hi, I'm Arathi Seshan 👋
 
-![](https://komarev.com/ghpvc/?username=arathivanchi-max)
-
 **Staff Software Engineer** | Streaming Infrastructure · Media Systems · AI Tooling
 
 A portfolio of AI-powered tools and agents spanning agentic pipelines, full-stack apps, and rapid prototypes. Developed using Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw, Lovable, and Base44, with advanced prompt engineering across Claude, ChatGPT, and Gemini. Clean, production-grade code at the intersection of deep systems engineering and modern AI fluency.
@@ -46,7 +44,9 @@ Mobile-optimized daily planner built on Base44. Time-bound task scheduling, cust
 **Languages:** Python · C++ · TypeScript · JavaScript  
 **AI/ML:** Prompt Engineering (Claude, ChatGPT, Gemini) · AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) · AI-Powered Apps (Lovable, Base44)  
 **Frontend:** React · Next.js · Tailwind CSS  
-**Backend/Infra:** Supabase · Embedded Linux · Multi-DRM · Streaming Protocols  
+**Backend/Infra:** Supabase · Embedded Linux · Multi-DRM · Streaming Protocols 
+
+![](https://komarev.com/ghpvc/?username=arathivanchi-max)
 **Tools:** Claude Code · GitHub · Vercel
 
 ---
