@@ -45,11 +45,11 @@ Mobile-optimized daily planner built on Base44. Time-bound task scheduling, cust
 **AI/ML:** Prompt Engineering (Claude, ChatGPT, Gemini) · AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) · AI-Powered Apps (Lovable, Base44)  
 **Frontend:** React · Next.js · Tailwind CSS  
 **Backend/Infra:** Supabase · Embedded Linux · Multi-DRM · Streaming Protocols 
-
-![](https://komarev.com/ghpvc/?username=arathivanchi-max)
 **Tools:** Claude Code · GitHub · Vercel
 
 ---
+
+![](https://komarev.com/ghpvc/?username=arathivanchi-max)
 
 ## 📫 Connect
 
