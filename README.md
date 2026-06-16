@@ -15,18 +15,21 @@ Right now I'm focused on shipping AI tools that solve real problems — many of 
 ### [Pitchr](https://github.com/arathivanchi-max/pitchr)
 Signal-driven career strategy agent. Reads your resume, LinkedIn export, and GitHub profile to discover, score, and prepare outreach for matched roles — using a 100-point, 10-dimension scoring model. Generates per-role gap analysis, cover letters, and resume customization plans. Single-file, stdlib-only Python CLI.
 
-### [Job Search Agent with Outreach](https://github.com/arathivanchi-max/job-search-agent-with-outreach)
-Agentic **Planner → Tools → Memory** pipeline built on the Anthropic SDK. Searches job boards live, extracts structured listings via Pydantic, and streams personalized outreach — orchestrated by Claude Sonnet with Haiku handling I/O-bound tasks.
-
-### [Resume Gap Analyzer Pro](https://github.com/arathivanchi-max/resume-gap-analyzer-pro)
-Custom GPT acting as recruiter, resume strategist, and interview coach in one. Delivers match scoring, ATS optimization, transferable skills mapping, STAR coaching, and a live mock interview mode.
+### [Lead Generation Agent — OpenClaw](https://github.com/arathivanchi-max)
+A structured AI agent built on OpenClaw that automates the full lead-generation pipeline — researching and sourcing targets, qualifying and prioritizing leads by fit and timing, and generating personalized outreach drafts and follow-up sequences. Operates under a staged permission model, earning expanded capabilities incrementally through demonstrated accuracy and judgment.
 
 ### [AI Agent Portfolio — MindStudio](https://github.com/arathivanchi-max/ai-agent-portfolio-mindstudio)
 Three deployed agents exploring multi-modal AI design: a webpage summarizer, an Impressionist art critique tool, and a text-to-animation scene generator.
 
+### [Job Search Agent with Outreach](https://github.com/arathivanchi-max/job-search-agent-with-outreach)
+Agentic **Planner → Tools → Memory** pipeline built on the Anthropic SDK. Searches job boards live, extracts structured listings via Pydantic, and streams personalized outreach — orchestrated by Claude Sonnet with Haiku handling I/O-bound tasks.
+
 ---
 
 ## 🛠️ Apps & Tools
+
+### [Interview Prep Pal](https://github.com/arathivanchi-max/interview-prep-pal)
+Full-stack behavioral interview coaching app built with React, TypeScript, and Supabase. Helps candidates practice with structure and track progress across question categories.
 
 ### [Zenith Portfolio Builder](https://github.com/arathivanchi-max/zenith)
 High-performance personal portfolio template built with Next.js. Features a glassmorphic bento grid dashboard, dark mode aesthetic, smooth micro-interactions, and a single centralized config file for easy customization.
@@ -34,22 +37,24 @@ High-performance personal portfolio template built with Next.js. Features a glas
 ### [DayFlow](https://github.com/arathivanchi-max/dayflow)
 Mobile-optimized daily planner built on Base44. Time-bound task scheduling, custom categories, calendar export (.ics), and a visual progress tracker.
 
-### [Interview Prep Pal](https://github.com/arathivanchi-max/interview-prep-pal)
-Full-stack behavioral interview coaching app built with React, TypeScript, and Supabase. Helps candidates practice with structure and track progress across question categories.
+---
+
+## 🧠 Custom GPTs
+
+### [Resume Gap Analyzer Pro](https://github.com/arathivanchi-max/resume-gap-analyzer-pro)
+Custom GPT acting as recruiter, resume strategist, and interview coach in one. Delivers match scoring, ATS optimization, transferable skills mapping, STAR coaching, and a live mock interview mode.
 
 ---
 
 ## 🧰 Tech Stack
 
 **Languages:** Python · C++ · TypeScript · JavaScript  
-**AI/ML:** Prompt Engineering (Claude, ChatGPT, Gemini) · AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) · AI-Powered Apps (Lovable, Base44)  
+**AI/ML:** Prompt Engineering (Claude, ChatGPT, Gemini) · AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) · AI-Powered Apps (Lovable, Base44) · Custom GPTs (ChatGPT)  
 **Frontend:** React · Next.js · Tailwind CSS  
-**Backend/Infra:** Supabase · Embedded Linux · Multi-DRM · Streaming Protocols 
+**Backend/Infra:** Supabase · Embedded Linux · Multi-DRM · Streaming Protocols  
 **Tools:** Claude Code · GitHub · Vercel
 
 ---
-
-![](https://komarev.com/ghpvc/?username=arathivanchi-max)
 
 ## 📫 Connect
 
