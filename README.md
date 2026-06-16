@@ -48,12 +48,15 @@ Custom GPT acting as recruiter, resume strategist, and interview coach in one. D
 
 ## 🧰 Tech Stack
 
-**Languages:** Python · C++ · TypeScript · JavaScript  
-**AI/ML:** Prompt Engineering (Claude, ChatGPT, Gemini) · AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) · AI-Powered Apps (Lovable, Base44) · Custom GPTs (ChatGPT)  
-**Frontend:** React · Next.js · Tailwind CSS  
-**Backend/Infra:** Supabase · Embedded Linux · Multi-DRM · Streaming Protocols  
-**Tools:** Claude Code · GitHub · Vercel
+Languages: Python · C++ · TypeScript
 
+AI/ML: Prompt Engineering (Claude, ChatGPT, Gemini) · AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) · AI-Powered Apps (Lovable, Base44) · Custom GPTs (ChatGPT)
+
+Frontend: React · Next.js
+
+Backend/Infra: Supabase
+
+Tools: GitHub
 ---
 
 ## 📫 Connect
