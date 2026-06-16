@@ -50,7 +50,9 @@ Custom GPT acting as recruiter, resume strategist, and interview coach in one. D
 
 Languages: Python · C++ · TypeScript
 
-AI/ML: Prompt Engineering (Claude, ChatGPT, Gemini) · AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) · AI-Powered Apps (Lovable, Base44) · Custom GPTs (ChatGPT)
+AI/ML: Prompt Engineering (Claude, ChatGPT, Gemini) 
+· AI Agents & Skills (Claude Code, Codex, Antigravity, Cursor, MindStudio, OpenClaw) 
+· AI-Powered Apps (Lovable, Base44) · Custom GPTs (ChatGPT)
 
 Frontend: React · Next.js
 
