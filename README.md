@@ -21,9 +21,6 @@ Agentic **Planner → Tools → Memory** pipeline built on the Anthropic SDK. Se
 ### [Resume Gap Analyzer Pro](https://github.com/arathivanchi-max/resume-gap-analyzer-pro)
 Custom GPT acting as recruiter, resume strategist, and interview coach in one. Delivers match scoring, ATS optimization, transferable skills mapping, STAR coaching, and a live mock interview mode.
 
-### [Interview Prep Pal](https://github.com/arathivanchi-max/interview-prep-pal)
-Full-stack behavioral interview coaching app built with React, TypeScript, and Supabase. Helps candidates practice with structure and track progress across question categories.
-
 ### [AI Agent Portfolio — MindStudio](https://github.com/arathivanchi-max/ai-agent-portfolio-mindstudio)
 Three deployed agents exploring multi-modal AI design: a webpage summarizer, an Impressionist art critique tool, and a text-to-animation scene generator.
 
@@ -36,6 +33,9 @@ High-performance personal portfolio template built with Next.js. Features a glas
 
 ### [DayFlow](https://github.com/arathivanchi-max/dayflow)
 Mobile-optimized daily planner built on Base44. Time-bound task scheduling, custom categories, calendar export (.ics), and a visual progress tracker.
+
+### [Interview Prep Pal](https://github.com/arathivanchi-max/interview-prep-pal)
+Full-stack behavioral interview coaching app built with React, TypeScript, and Supabase. Helps candidates practice with structure and track progress across question categories.
 
 ---
 
