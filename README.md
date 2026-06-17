@@ -60,6 +60,7 @@ Backend/Infra: Supabase
 
 Tools: GitHub
 ---
+![](https://komarev.com/ghpvc/?username=arathivanchi-max)
 
 ## 📫 Connect
 
