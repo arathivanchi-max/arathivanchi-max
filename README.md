@@ -12,9 +12,9 @@ Right now I'm focused on shipping AI tools that solve real problems — many of 
 
 ## 🤖 AI & Agentic Projects
 
-Pitchr — Private Project
+### Pitchr — Private Project
 
-**Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/docs/pitchr-architecture.md)**
+**Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/pitchr-architecture.md)**
 
 Signal-driven career strategy system that turns resume, professional-profile, and public-project evidence into explainable job matching, gap analysis, outreach support, and resume-tailoring guidance.
 
