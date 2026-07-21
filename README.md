@@ -12,8 +12,15 @@ Right now I'm focused on shipping AI tools that solve real problems — many of 
 
 ## 🤖 AI & Agentic Projects
 
-### [Pitchr](https://github.com/arathivanchi-max/pitchr)
-Signal-driven career strategy agent. Reads your resume, LinkedIn export, and GitHub profile to discover, score, and prepare outreach for matched roles — using a 100-point, 10-dimension scoring model. Generates per-role gap analysis, cover letters, and resume customization plans. Single-file, stdlib-only Python CLI.
+Pitchr — Private Project
+
+**Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/docs/pitchr-architecture.md)**
+
+Signal-driven career strategy system that turns resume, professional-profile, and public-project evidence into explainable job matching, gap analysis, outreach support, and resume-tailoring guidance.
+
+I designed Pitchr around a deterministic decision core with an optional LLM explanation layer that never changes ranking results. The system includes evidence provenance, direct-versus-transferable matching, persistent caching, model and API-call controls, dry-run cost projections, deterministic fallbacks, score-delta analysis, privacy-mode reports, and 400+ automated tests.
+
+**Architecture highlights:** Python · deterministic ranking · structured evidence extraction · agent/model cost controls · prompt and result caching · explainable recommendations · local-first privacy
 
 ### [Lead Generation Agent — OpenClaw](https://github.com/arathivanchi-max)
 A structured AI agent built on OpenClaw that automates the full lead-generation pipeline — researching and sourcing targets, qualifying and prioritizing leads by fit and timing, and generating personalized outreach drafts and follow-up sequences. Operates under a staged permission model, earning expanded capabilities incrementally through demonstrated accuracy and judgment.
