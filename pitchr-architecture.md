@@ -4,6 +4,8 @@
 
 Pitchr is a signal-driven career strategy system that discovers job opportunities, evaluates them against a candidate's documented experience, and produces evidence-backed guidance for prioritization, outreach, and resume tailoring.
 
+Pitchr has a sibling system, **Catchr**, which applies the same deterministic evaluation engine to non-technical roles — Product Management, Customer Success, Operations, and more — specialized through configuration rather than a separate codebase. See [catchr-architecture.md](./catchr-architecture.md).
+
 The project began as a personal workflow tool and evolved into a multi-stage local application designed around four principles:
 
 - Keep sensitive candidate information local.
