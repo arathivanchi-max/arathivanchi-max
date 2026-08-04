@@ -12,6 +12,16 @@ Right now I'm focused on shipping AI tools that solve real problems — many of 
 
 ## 🤖 AI & Agentic Projects
 
+### Catchr — Private Project
+
+**Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/catchr-architecture.md)**
+
+Signal-driven search agent for non-technical roles. Discovers, ranks, and prepares outreach matched to your actual professional evidence instead of manually curated keyword lists.
+
+Features: Evidence-based Scoring, Flexible Role Packs, and an Offline Pipeline.
+
+**Architecture highlights:** Python · deterministic ranking · structured evidence extraction · agent/model cost controls · prompt and result caching · explainable recommendations · local-first privacy
+
 ### Pitchr — Private Project
 
 **Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/pitchr-architecture.md)**
