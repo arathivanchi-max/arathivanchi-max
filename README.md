@@ -8,6 +8,8 @@ A portfolio of AI-powered tools and agents spanning agentic pipelines, full-stac
 
 Right now I'm focused on shipping AI tools that solve real problems — many of them ones I've faced firsthand.
 
+🌐 [View my engineering portfolio](https://arathi-seshan-portfolio.netlify.app/)
+
 ---
 
 ## 🤖 AI & Agentic Projects
