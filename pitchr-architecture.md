@@ -91,11 +91,11 @@ The optional AI layer explains already-computed results and supports bounded dra
 
 This boundary provides several benefits:
 
-- Offline runs remain fully functional.
-- Model failures cannot corrupt ranking results.
-- Generated prose can be reviewed independently from the underlying evidence.
-- The system can change models without changing the scoring contract.
-- Cached explanations can be reused without paying for another generation call.
+- Core evaluation and standard reports can run without generative-model calls.
+- Model failures fall back to deterministic output and do not alter ranking results.
+- Generated prose can be reviewed independently from its underlying evidence.
+- Model selection can change without changing the scoring contract.
+- Unchanged generated results can be reused from cache without another model call.
 
 The LLM receives a bounded job excerpt plus the existing match context and returns structured, human-facing fields. If the model is disabled, unavailable, or returns unusable output, deterministic report text remains available.
 
