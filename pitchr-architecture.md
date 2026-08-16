@@ -85,7 +85,7 @@ The core ranking path is deterministic and testable. It combines multiple eviden
 
 The exact weights, term maps, thresholds, and extraction policies are proprietary. At the architecture level, the important property is that identical normalized inputs produce identical ranking outputs.
 
-### 4. ### 4. Generative AI is an optional assistance layer
+### 4. Generative AI is an optional assistance layer
 
 The optional AI layer explains already-computed results and supports bounded drafting tasks such as outreach and résumé guidance. It does not assign or modify match scores, lifecycle state, or pipeline decisions.
 
