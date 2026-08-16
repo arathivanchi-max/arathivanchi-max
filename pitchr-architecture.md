@@ -85,9 +85,9 @@ The core ranking path is deterministic and testable. It combines multiple eviden
 
 The exact weights, term maps, thresholds, and extraction policies are proprietary. At the architecture level, the important property is that identical normalized inputs produce identical ranking outputs.
 
-### 4. Generative AI is an optional sidecar
+### 4. ### 4. Generative AI is an optional assistance layer
 
-The optional LLM layer explains an already-computed result. It does not assign or modify the match score.
+The optional AI layer explains already-computed results and supports bounded drafting tasks such as outreach and résumé guidance. It does not assign or modify match scores, lifecycle state, or pipeline decisions.
 
 This boundary provides several benefits:
 
@@ -126,6 +126,14 @@ This approach is designed to reduce two common failure modes:
 1. Crediting experience the candidate does not actually have.
 2. Penalizing the candidate for prose, navigation text, benefits language, or optional qualifications incorrectly treated as requirements.
 
+## Local application and observability
+
+Pitchr runs as a local desktop application over the same deterministic pipeline used by scheduled and command-line workflows. The interface provides guided run configuration, local reports, lifecycle management, and explicitly selected résumé-tailoring actions without moving candidate data to a hosted Pitchr service.
+
+A private diagnostics view turns historical run data into visual trends for performance, lead movement, scoring changes, and discovery-source contribution. An optional local alert preview highlights changes that may deserve attention. The preview has no message-delivery integration and does not send data externally.
+
+Application controls remain separate from ranking and extraction logic. The interface starts approved pipeline workflows, while the pipeline remains responsible for evaluation and generated state.
+
 ## Reliability and reproducibility
 
 Pitchr treats ranking changes as changes that should be observable, not hidden.
@@ -139,7 +147,7 @@ Reliability mechanisms include:
 - Versioned extraction behavior for detecting stale derived data
 - Safe fallbacks for unavailable network and model services
 - Structural validation of generated Markdown and HTML reports
-- More than 400 automated test functions covering parsing, matching, evidence handling, caching, rendering, lifecycle behavior, and failure cases
+- More than 750 automated tests covering parsing, matching, evidence handling, caching, rendering, lifecycle behavior, diagnostics, application workflows, and    failure cases.
 
 The system favors precision over aggressive inference. Unknown terms are surfaced for review instead of automatically becoming scored requirements.
 
