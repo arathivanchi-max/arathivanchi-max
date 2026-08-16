@@ -18,19 +18,21 @@ Right now I'm focused on shipping AI tools that solve real problems — many of 
 
 **Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/catchr-architecture.md)**
 
-Signal-driven search agent for non-technical roles. Discovers, ranks, and prepares outreach matched to your actual professional evidence instead of manually curated keyword lists.
+Local-first career strategy system for non-technical roles. Catchr adapts the same deterministic, evidence-backed architecture as Pitchr across multiple role families through configuration rather than separate implementations.
 
-Features: Evidence-based Scoring, Flexible Role Packs, and an Offline Pipeline.
+It combines opportunity discovery with explainable evaluation, gap analysis, lifecycle tracking, outreach preparation, and résumé-tailoring guidance. Generative AI is optional, bounded, and kept outside the scoring path.
 
-**Architecture highlights:** Python · deterministic ranking · structured evidence extraction · agent/model cost controls · prompt and result caching · explainable recommendations · local-first privacy
+**Architecture highlights:** Python · configuration-driven specialization · deterministic evaluation · evidence provenance · reusable role families · private diagnostics · model cost controls · local-first privacy
 
 ### Pitchr — Private Project
 
-**Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/pitchr-architecture.md)**
+**Pitchr is a private proprietary project. See the · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/pitchr-architecture.md) for its engineering principles and high-level design**
 
-Signal-driven career strategy system that turns resume, professional-profile, and public-project evidence into explainable job matching, gap analysis, outreach support, and resume-tailoring guidance.
+### Pitchr
 
-I designed Pitchr around a deterministic decision core with an optional LLM explanation layer that never changes ranking results. The system includes evidence provenance, direct-versus-transferable matching, persistent caching, model and API-call controls, dry-run cost projections, deterministic fallbacks, score-delta analysis, privacy-mode reports, and 400+ automated tests.
+Local-first career strategy application for senior technical roles. Pitchr combines opportunities from multiple discovery sources with deterministic, evidence-backed evaluation, then supports prioritization, gap analysis, lifecycle tracking, outreach preparation, and résumé tailoring.
+
+It includes a native desktop experience and private visual diagnostics for pipeline performance, lead movement, scoring changes, and discovery-source contribution. Generative AI is optional, bounded, and kept outside the scoring path.
 
 **Architecture highlights:** Python · deterministic ranking · structured evidence extraction · agent/model cost controls · prompt and result caching · explainable recommendations · local-first privacy
 
