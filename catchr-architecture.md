@@ -96,20 +96,18 @@ The core ranking path is deterministic and testable. It combines multiple eviden
 
 The exact weights, capability maps, thresholds, and extraction policies are proprietary. At the architecture level, the important property is that identical normalized inputs produce identical ranking outputs.
 
-### 4. Generative AI is an optional sidecar
+### 4. Generative AI is an optional assistance layer
 
-The optional LLM layer explains an already-computed result. It does not assign or modify the match score.
+The optional AI layer explains already-computed results and supports bounded drafting tasks such as outreach and résumé guidance. It does not assign or modify match scores, lifecycle state, or pipeline decisions.
 
 This boundary provides several benefits:
 
-- Offline runs remain fully functional.
-- Model failures cannot corrupt ranking results.
-- Generated prose can be reviewed independently from the underlying evidence.
-- The system can change models without changing the scoring contract.
-- Cached explanations can be reused without paying for another generation call.
-
-The LLM receives a bounded job excerpt plus the existing match context and returns structured, human-facing fields. If the model is disabled, unavailable, or returns unusable output, deterministic report text remains available.
-
+- Core evaluation and standard reports can run without generative-model calls.
+- Model failures fall back to deterministic output and do not alter ranking results.
+- Generated prose can be reviewed independently from its underlying evidence.
+- Model selection can change without changing the scoring contract.
+- Unchanged generated results can be reused from cache without another model call.
+  
 ## Agent and model optimization decisions
 
 Catchr includes several mechanisms intended to control model cost, latency, and failure impact:
