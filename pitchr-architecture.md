@@ -74,11 +74,13 @@ Search providers answer "what opportunities exist?" The match engine answers "ho
 
 Every lead is normalized into a shared representation before evaluation. The normalization stage handles duplicate links, reposted roles, source metadata, dates, and lifecycle state.
 
-Discovery draws on several independent channels — direct company applicant-tracking boards, paid and free web-search providers, a shared job-index protocol service, public community hiring threads, niche public indexes, and explicitly curated or pasted leads. Each channel is normalized into the same representation, and the report records which channel surfaced a lead so the contribution of each source stays visible.
+Discovery draws on several independent channels — direct company applicant-tracking boards, paid and free web-search providers, a shared job-index protocol service, public community hiring threads, a public job-aggregation index, niche public indexes, and explicitly curated or pasted leads. A pasted posting can also update a lead that is already tracked, rather than creating a duplicate. Each channel is normalized into the same representation, and the report records which channel surfaced a lead so the contribution of each source stays visible.
 
 Discovery also has its own lifecycle. Verified results can propose company boards the configuration does not yet track, and a bounded number of proposals can be inspected during the same run without editing stored configuration. A board is only recommended for removal after repeated observations across a sustained window with no retained strong lead and no application history, and the recommendation shows the evidence behind it. Adding or removing a tracked board is always an explicit, exact, reviewable action.
 
-Several intake rules exist to keep low-quality supply from reaching the scorer at all: a per-employer cap so a board-heavy company cannot flood the set, suppression of aggregators that hide the employer behind unverifiable text, and quarantine of community posts that bundle several openings into one comment rather than scoring them as a single incoherent lead.
+Discovery is location-aware. Targets are defined by the candidate's own preferred areas, reports can be searched and filtered by location, and a lead card shows every city it was targeted for. Boards that are only useful for a short time rotate in and out, and proposals to add a board persist across runs until they are reviewed.
+
+Several intake rules exist to keep low-quality supply from reaching the scorer at all: a per-employer cap so a board-heavy company cannot flood the set, suppression of aggregators that hide the employer behind unverifiable text, and quarantine of community posts that bundle several openings into one comment rather than scoring them as a single incoherent lead. Intake errs toward recovering a posting that was wrongly set aside: when a quarantined item is clearly the same role as a real posting, it is restored instead of staying lost.
 
 ### 2. Candidate evidence is extracted independently
 
@@ -112,6 +114,10 @@ This boundary provides several benefits:
 - Unchanged generated results can be reused from cache without another model call.
 
 The LLM receives a bounded job excerpt plus the existing match context and returns structured, human-facing fields. If the model is disabled, unavailable, or returns unusable output, deterministic report text remains available.
+
+The optional layer can also produce an independent **LLM read** of a role, shown on the lead card beside the deterministic match and the recruiter-style read. The three views are deliberately separate: the model's read never changes the deterministic score, and when the views disagree the card shows the difference and the reason instead of averaging them away. Enabling it is an explicit choice, it reuses earlier assessments when nothing relevant has changed, and it can run on its own without regenerating summary text.
+
+The model backend is replaceable. Calls can go through a hosted API or through a local command-line client on the user's existing subscription, and the rest of the system sees the same interface either way.
 
 ### 5. Evidence updates pass through an explicit gate
 
@@ -149,6 +155,7 @@ Pitchr includes several mechanisms intended to control model cost, latency, and 
 - **Strategy scoping:** generation can be restricted to selected recommendation groups rather than every discovered lead.
 - **Dry-run cost projection:** the system can estimate eligible calls, token volume, and model cost without invoking an API.
 - **Actual cost accounting:** a per-run ledger records real model and search-provider spend after the fact, so projections can be checked against what a run actually cost.
+- **Time and novelty limits:** summary and scoring passes can be time-bounded, show live progress, and be restricted to postings that do not yet have a result. Earlier results for postings that have since gone stale are kept and labelled as such rather than regenerated.
 - **Graceful fallback:** errors return the workflow to deterministic output instead of failing the overall pipeline.
 
 These controls make the model a replaceable component rather than an unbounded dependency.
@@ -176,11 +183,7 @@ This approach is designed to reduce two common failure modes:
 
 ## Candidate-facing generated artifacts
 
-Beyond ranking, Pitchr produces drafting artifacts for the roles worth pursuing: reframed résumé bullets, tailored summary paragraphs, outreach cover letters, and an optional tailored word-processor document per selected lead.
-
-These follow the same containment rules as every other model feature. They are opt-in, cost-capped, cached per posting, and report-only. A posting is treated as context about the team's work, never as evidence about the candidate: a rewrite cannot introduce a number, employer, or claim the underlying draft does not already make, and a rewrite that only shortens the draft is discarded in favor of the deterministic template. Leads in terminal states are never tailored, and anything already paid for reappears on later runs at no cost rather than silently disappearing.
-
-Saved artifacts belong to a posting, not to a company and title. When two distinct requisitions at the same employer share a title, Pitchr does not guess which one owns a saved document. It surfaces the candidates with their exact links and asks. The choice is validated against a freshly recomputed ambiguity group on submission, refused while a run is in progress, rolled back if its audit record cannot be written, and archives rather than deletes the original file.
+Beyond ranking, Pitchr can produce drafting aids for the roles worth pursuing, such as tailored résumé and outreach drafts. They follow the same containment rules as every other model feature: opt-in, cost-capped, cached, and report-only. A posting is treated as context about the team's work, never as evidence about the candidate, and saved artifacts are tied to a specific posting rather than to a company and title.
 
 ## Local application and observability
 
@@ -206,12 +209,12 @@ Reliability mechanisms include:
 
 - Persistent public-page caches with controlled refresh behavior and separate freshness policies for evidence and closure checks
 - Idempotent normalization and deduplication, with posting identity precise enough that two requisitions sharing a careers path are never reported as one lead moving
-- Durable lifecycle state for applied, rejected, closed, and preserved leads
+- Durable lifecycle state for applied, rejected, closed, and preserved leads, with closure checks that also cover roles already applied to, and a closed badge that appears only when the closure has been verified
 - Score-history snapshots and score-delta reports, with privacy-safe digests marking which input category changed
 - Versioned extraction behavior for detecting stale derived data, plus reconciliation reporting on what became current, what stayed stale, and why
 - Safe fallbacks for unavailable network and model services
 - Structural validation of generated Markdown and HTML reports
-- More than 1,300 automated tests across eleven suites, covering parsing, matching, evidence handling, the evidence gate, caching, rendering, lifecycle behavior, diagnostics, scheduling, source planning, application workflows, and failure cases
+- More than 2,000 automated tests, owned by feature and run as focused suites alongside integration and suite-integrity checks, covering parsing, matching, evidence handling, the evidence gate, caching, rendering, lifecycle behavior, diagnostics, scheduling, source planning, application workflows, and failure cases
 
 The system favors precision over aggressive inference. Unknown terms are surfaced for review instead of automatically becoming scored requirements.
 
@@ -266,6 +269,7 @@ Building Pitchr reinforced several engineering lessons:
 - A scoring change is incomplete without score-delta analysis across a realistic corpus.
 - Required, preferred, transferable, contextual, and missing evidence must remain distinct throughout the pipeline.
 - Re-reading the same source is a write, and deserves the same review a write gets.
+- An independent model opinion is more useful beside the deterministic result, with disagreements shown, than blended into it.
 - Cost and reliability controls should be designed before a model feature is enabled by default.
 
 ## Project status and ownership
