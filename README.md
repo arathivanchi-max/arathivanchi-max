@@ -36,6 +36,14 @@ It includes a native desktop experience and private visual diagnostics for pipel
 
 **Architecture highlights:** Python · deterministic ranking · structured evidence extraction · agent/model cost controls · prompt and result caching · explainable recommendations · local-first privacy
 
+### CareerOS — Private Project
+
+**Private source code · [Public architecture overview](https://github.com/arathivanchi-max/arathivanchi-max/blob/main/careeros-architecture.md)**
+
+Local-first job-search tracker that runs in the browser, with no server or account. CareerOS follows every role through its pipeline and every outreach contact through reached-out, replied, and follow-up status, with an outreach dashboard. An optional research agent suggests contacts for each role, requires a cited source for every name, and drafts a first message. Nothing is sent automatically, and every message is reviewed and sent by me.
+
+**Architecture highlights:** JavaScript · Python · IndexedDB · sourced contact suggestions · additive merge · human-in-the-loop outreach · local-first privacy
+
 ### [Lead Generation Agent — OpenClaw](https://github.com/arathivanchi-max)
 A structured AI agent built on OpenClaw that automates the full lead-generation pipeline — researching and sourcing targets, qualifying and prioritizing leads by fit and timing, and generating personalized outreach drafts and follow-up sequences. Operates under a staged permission model, earning expanded capabilities incrementally through demonstrated accuracy and judgment.
 
